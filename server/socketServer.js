@@ -20,5 +20,5 @@ wss.on("connection", function connection(ws) {
     const jsonData = JSON.stringify(data);
     ws.send(jsonData);
     t += 0.01;
-  }, 16);
+  }, 32);
 });

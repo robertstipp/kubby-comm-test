@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 import DataBox from "./components/Databox.jsx";
+import DataDial from "./components/DataDial";
+import DataBar from "./components/VerticalDatabar.jsx";
+import VerticalDatabar from "./components/VerticalDatabar.jsx";
+import HorizontalDatabar from "./components/HorizontalDatabar.jsx";
 const colorPalette = [
   "#00FF00", // Green
   "#4CFF00", // Green-Yellowish
@@ -47,9 +51,9 @@ function App() {
   }, []); // Empty dependency array means this effect runs once on mount
 
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "repeat(50,1fr)" }}>
+    <div style={{ display: "grid", gridTemplateColumns: "repeat(20,1fr)" }}>
       {data.map((el, i) => {
-        return <DataBox key={i} data={el} />;
+        return <DataDial key={i} data={el} />;
       })}
     </div>
   );
